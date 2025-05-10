@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="front-page.css">
+</head>
+<body>
+    <header>
+        <a href="front-page.html">
+            <img src="logo-fast-markets.png" alt="" class="navbar__logo" />
+        </a>
+        <div class="cart-icon" onclick="toggleCart()">
+            <span class="cart-count"></span>
+            <i class="fas fa-shopping-cart">Carrito</i>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Modal del Carrito -->
+        <div id="cartModal" class="modal">
+            <div class="modal-content cart-modal">
+                <span class="close" onclick="toggleCart()">&times;</span>
+                <h2>Tu Carrito</h2>
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <h3>Total: $<span id="cartTotal">0</span></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <img src="lechecolanta.png" alt="Producto 1">
+                <h3>Luche Colanta ID 123</h3>
+                <p>La mejor leche y de mejor calidad!</p>
+                <div class="price">$4.900</div>
+            </div>
+            <div class="product">
+                <img src="quesocrema.jpg" alt="Producto 2">
+                <h3>Queso Crema ID 456</h3>
+                <p>Acomapaña tus comidas con el mejor quesocrema</p>
+                <div class="price">$7.890</div>
+            </div>
+            <div class="product">
+                <img src="quesoholandes.jpg" alt="Producto 3">
+                <h3>Queso Holandes ID 789</h3>
+                <p>Exclusividad a la hora de acompañar tus comidas</p>
+                <div class="price">$19.000</div>
+            </div>
+        </div>
+        <button class="scan-button" onclick="openScanModal()">Escanear Producto</button>
+    </div>
+
+    <!-- Modal de escaneo -->
+    <div id="scanModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('scanModal')">&times;</span>
+            <h2>Escanear Producto</h2>
+            <input type="text" id="productCode" placeholder="Ingrese el código del producto">
+            <button onclick="searchProduct()">Buscar</button>
+        </div>
+    </div>
+
+
+    <section>
+        <footer class="footer">
+          <div class="container ft_container">
+              <div class="cn_endblock">
+                  <div class="contact_endblock">
+                      <div class="ft_icons">
+                          <img src="logo-fast-markets.png" alt="Email Icon" class="email_icon ft_icon icon">
+                          
+                      </div>
+                      <p class="c_name">© JJDC</p>
+                  </div>
+                  <div class="joinprojects_endblock">
+                      <h2 class="footer_jointitle">¡Conoce más acerca de FastMarket!</h2>
+                      <p class="join_hope">En FastMarket, llevamos el supermercado a la palma de tu mano. Compra todo lo que necesitas desde tu celular, de forma rápida y sencilla. ¡Tu tiempo es valioso, y nosotros lo sabemos!</p>
+                  </div>
+              </div>
+          </div>
+        </footer>
+      </section>
+</body>
+<script src="products.js"></script>
+</html>
